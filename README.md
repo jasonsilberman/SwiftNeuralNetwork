@@ -2,11 +2,10 @@
 A neural network built in Swift.
 
 ## Usage
-Below are some basic uses, you can look at tests to see some more advanced usages.
+Below are some basic uses, you can look at [tests](https://github.com/jasonsilberman/SwiftNeuralNetwork/blob/master/tests/) to see some more advanced usages.
 
 ### Creation & Training
 To get started create an instance of `NeuralNetwork` and train some data to it.
-
 
 ```swift
 // This creates a network with three layers of the following sizes(2 nuerons, 8, 1).
