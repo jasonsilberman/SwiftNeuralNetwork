@@ -1,5 +1,5 @@
 # Swift Neural Network
-A neural network built in Swift.
+A neural network built in Swift built on accelerated SIMD math. This is a network that can be trained and run on device with good performance. No need to use a server, and unlike CoreML, it supports training networks on device.
 
 ## Usage
 Below are some basic uses, you can look at [tests](https://github.com/jasonsilberman/SwiftNeuralNetwork/tree/master/Tests) to see some more advanced usages.
@@ -24,6 +24,25 @@ network.train(inputs: trainingData, targetOutputs: trainingResults, learningRate
 ```swift
 let result = network.infer(input: [0, 1])
 ```
+
+## Activation Functions
+The following activation functions are available, although some do not work properly yet. You can see the math for them [here](https://github.com/jasonsilberman/SwiftNeuralNetwork/blob/master/SwiftNeuralNetwork/Sources/ActivationFunction.swift).
+
+### None
+This should be used on input layers, it applies no math to the inputs.
+
+### Sigmoid
+This is the most common activation function and will be used most frequently. It will crush all values between -1 and 1. This function has been tested the most thoroughly.
+
+*NOTE: The inputs to this function should be normalized (see here for more on that), otherwise the function will not be that helpful.*
+
+### LeakyReLU
+This function only activates if the values are positive. This could be useful if you only want to turn on neurons if a value is positive. This has been somewhat tested.
+
+### Softamx
+This function is useful for categorizing data. It is currently a work in progress and not supported.
+
+*NOTE: This function is not properly supported yet.*
 
 ## License
 This project is licensed under the [MIT License](https://github.com/jasonsilberman/SwiftNeuralNetwork/blob/master/LICENSE).
