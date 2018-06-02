@@ -19,9 +19,9 @@ class XORTests: XCTestCase {
 	}
 	
 	var network: NeuralNetwork!
-    
-    override func setUp() {
-        super.setUp()
+	
+	override func setUp() {
+		super.setUp()
 		network = NeuralNetwork(layerStructure: [2, 20, 1], activationFunctions: [.none, .sigmoid, .sigmoid])
 		
 		let trainingData: [[Double]] = [[0, 1], [0, 0], [1, 1], [1, 0]]
@@ -45,10 +45,10 @@ class XORTests: XCTestCase {
 		} else {
 			print("SUCCESSFULLY reached RSS of \(lastRSS) after \(count) tries.")
 		}
-    }
-    
-    func testXOR() {
-        let validationData: [[Double]] = [[0, 1], [0, 0], [1, 1], [1, 0]]
+	}
+	
+	func testXOR() {
+		let validationData: [[Double]] = [[0, 1], [0, 0], [1, 1], [1, 0]]
 		let validationResults: [[Double]] = [[1], [0], [0], [1]]
 		
 		for (input, expectedResult) in zip(validationData, validationResults) {
@@ -57,6 +57,6 @@ class XORTests: XCTestCase {
 			let difference = abs(actualResult[0] - expectedResult[0])
 			XCTAssertTrue(difference < 0.5, "Network validation failed. Input: \(input). Expected: \(expectedResult). Actual: \(actualResult)")
 		}
-    }
-    
+	}
+	
 }
