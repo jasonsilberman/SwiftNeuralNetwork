@@ -16,7 +16,7 @@ public class NeuralNetwork: Codable {
 	/// Initialize a neural network.
 	///
 	/// - Parameters:
-	///   - layerStructure: Each number in the layoutStructure represent a layer and the value is the number of neurons in said layer.
+	///   - layerStructure: Each number in the layoutStructure represent a layer and the value is the number of nodes in said layer.
 	///   - activationFunctions: A list of activation functions for each layer. There must be an activation function for each layer.
 	public init(layerStructure: [Int], activationFunctions: [ActivationFunction]) {
 		precondition(layerStructure.count >= 3, "Layer structer must have at least three nodes (1 input, 1 hidden, 1 output)")

@@ -46,7 +46,7 @@ This is the most common activation function and will be used most frequently. It
 *NOTE: The inputs to this function should be normalized (see here for more on that), otherwise the function will not be that helpful.*
 
 ### LeakyReLU
-This function only activates if the values are positive. This could be useful if you only want to turn on neurons if a value is positive. This has been somewhat tested.
+This function only activates if the values are positive. This could be useful if you only want to turn on nodes if a value is positive. This has been somewhat tested.
 
 ### Softamx
 This function is useful for categorizing data. It is currently a work in progress and not supported.

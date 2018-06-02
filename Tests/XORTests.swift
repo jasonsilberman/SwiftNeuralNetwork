@@ -10,7 +10,7 @@ import XCTest
 @testable import SwiftNeuralNetwork
 
 /// This is a test of XOR (exclusive or). We have a neural network that will take 2 inputs and produce 1 output.
-/// There is also a hidden layer with 20 neurons that is used to help predict the output. The 20 is chosen pretty randomly. I just played with it until it felt like it was consistanyl taking less iterations to train.
+/// There is also a hidden layer with 20 nodes that is used to help predict the output. The 20 is chosen pretty randomly. I just played with it until it felt like it was consistanyl taking less iterations to train.
 /// In `setup()` the network is trained to a RSS of 0.02 (this is just training the network until it is very accurate). We give the network 2000 tries to achieve this. Usually it happens in ~500 iterations.
 class XORTests: XCTestCase {
 	
