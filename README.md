@@ -1,8 +1,8 @@
 ![Swift Neural Network](./Logo.png)
 
-A neural network built in Swift built on accelerated SIMD math. This is a network that can be trained and run on device with good performance. No need to use a server!
+A neural network built in Swift and accelerated by SIMD math. This is a feed forward neural network that can be trained on device with good performance. No need to use a server!
 
-This is my first foray into machine learning. It is well tested and being used in production, but please file an issue or create a pull request if you see anything wrong or have any questions.
+*This is my first foray into machine learning. It is well tested and being used in production, but please file an issue or create a pull request if you see anything wrong or have any questions.*
 
 ## Installation
 You can add SwiftNeuralNetwork to your project through [Carthage](https://github.com/Carthage/Carthage) by adding the following to your `Cartfile`.
@@ -12,7 +12,7 @@ github "jasonsilberman/SwiftNeuralNetwork"
 ```
 
 ## Usage
-Below are some basic uses, you can look at [tests](https://github.com/jasonsilberman/SwiftNeuralNetwork/tree/master/Tests) to see some more advanced usages.
+Below is an example of some basic usage, you can look at [/tests](https://github.com/jasonsilberman/SwiftNeuralNetwork/tree/master/Tests) to see some more advanced uses.
 
 ### Creation & Training
 To get started create an instance of `NeuralNetwork` and train some data to it.
@@ -35,16 +35,23 @@ network.train(inputs: trainingData, targetOutputs: trainingResults, learningRate
 let result = network.infer(input: [0, 1])
 ```
 
+### Cost Calculation
+You can calculate the error or cost of the network by using the following function:
+
+```swift
+let RSS = network.rss(inputs: trainingData, targetOutputs: trainingResults)
+```
+
 ## Activation Functions
 The following activation functions are available, although some do not work properly yet. You can see the math for them [here](https://github.com/jasonsilberman/SwiftNeuralNetwork/blob/master/SwiftNeuralNetwork/Sources/ActivationFunction.swift).
 
 ### None
-This should be used on input layers, it applies no math to the inputs.
+This should be used on the input layer, it applies no math to the inputs.
 
 ### Sigmoid
-This is the most common activation function and will be used most frequently. It will crush all values between -1 and 1. This function has been tested the most thoroughly.
+This is the most common activation function and it will be used most frequently. It will crush all values between -1 and 1. This function has been tested the most thoroughly.
 
-*NOTE: The inputs to this function should be normalized (see here for more on that), otherwise the function will not be that helpful.*
+*NOTE: The inputs to this function should be normalized, otherwise the function will not be that helpful.*
 
 ### LeakyReLU
 This function only activates if the values are positive. This could be useful if you only want to turn on nodes if a value is positive. This has been somewhat tested.
@@ -52,7 +59,7 @@ This function only activates if the values are positive. This could be useful if
 ### Softamx
 This function is useful for categorizing data. It is currently a work in progress and not supported.
 
-*NOTE: This function is not properly supported yet.*
+*NOTE: Do not use this function in production yet.*
 
 ## License
 This project is licensed under the [MIT License](https://github.com/jasonsilberman/SwiftNeuralNetwork/blob/master/LICENSE).
