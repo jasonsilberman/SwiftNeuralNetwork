@@ -58,10 +58,7 @@ func add(_ xs: [Double], _ ys: [Double]) -> [Double] {
 /// NOTE: Collections do not have to be the same length
 func partialSub(_ xs: [Double], _ ys: [Double]) -> [Double] {
 	var results = [Double](repeating: 0.0, count: xs.count)
-	vDSP_vsubD(ys, 1,
-			  xs, 1,
-			  &results, 1,
-			  vDSP_Length(xs.count))
+	vDSP_vsubD(ys, 1, xs, 1, &results, 1, vDSP_Length(xs.count))
 	
 	return results
 }

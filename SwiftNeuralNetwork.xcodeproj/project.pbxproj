@@ -64,7 +64,8 @@
 		96EC01B220C21072008D3A2F = {
 			isa = PBXGroup;
 			children = (
-				96EC01BE20C21072008D3A2F /* SwiftNeuralNetwork */,
+				96EC01DC20C21178008D3A2F /* Sources */,
+				96EC01DB20C2116F008D3A2F /* Resources */,
 				96EC01D620C210C7008D3A2F /* Tests */,
 				96EC01BD20C21072008D3A2F /* Products */,
 			);
@@ -77,15 +78,6 @@
 				96EC01C520C21072008D3A2F /* SwiftNeuralNetworkTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		96EC01BE20C21072008D3A2F /* SwiftNeuralNetwork */ = {
-			isa = PBXGroup;
-			children = (
-				96EC01DC20C21178008D3A2F /* Sources */,
-				96EC01DB20C2116F008D3A2F /* Resources */,
-			);
-			path = SwiftNeuralNetwork;
 			sourceTree = "<group>";
 		};
 		96EC01D620C210C7008D3A2F /* Tests */ = {
@@ -386,7 +378,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/SwiftNeuralNetwork/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -413,7 +405,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/SwiftNeuralNetwork/Resources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

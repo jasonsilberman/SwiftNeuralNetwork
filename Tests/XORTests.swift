@@ -53,7 +53,7 @@ class XORTests: XCTestCase {
 		
 		for (input, expectedResult) in zip(validationData, validationResults) {
 			let actualResult = network.infer(input: input)
-			// if difference is within .5 then the correct answer was given
+			// if difference is within 0.5 then the correct answer was given
 			let difference = abs(actualResult[0] - expectedResult[0])
 			XCTAssertTrue(difference < 0.5, "Network validation failed. Input: \(input). Expected: \(expectedResult). Actual: \(actualResult)")
 		}
