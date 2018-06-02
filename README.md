@@ -1,4 +1,5 @@
-# Swift Neural Network
+![Swift Neural Network](./logo.png)
+
 A neural network built in Swift built on accelerated SIMD math. This is a network that can be trained and run on device with good performance. No need to use a server!
 
 This is my first foray into machine learning. It is well tested and being used in production, but please file an issue or create a pull request if you see anything wrong or have any questions.
@@ -17,7 +18,7 @@ Below are some basic uses, you can look at [tests](https://github.com/jasonsilbe
 To get started create an instance of `NeuralNetwork` and train some data to it.
 
 ```swift
-// This creates a network with three layers of the following sizes(2 nuerons, 8, 1).
+// This creates a network with three layers of the following sizes(2 nodes, 8, 1).
 // The input layer has no activation function, while the second two both use a sigmoid function.
 let network = NeuralNetwork(layerStructure: [2, 8, 1], activationFunctions: [.none, .sigmoid, .sigmoid])
 
