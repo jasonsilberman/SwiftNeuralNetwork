@@ -1,6 +1,15 @@
 # Swift Neural Network
 A neural network built in Swift built on accelerated SIMD math. This is a network that can be trained and run on device with good performance. No need to use a server!
 
+This is my first foray into machine learning. It is well tested and being used in production, but please file an issue or create a pull request if you see anything wrong or have any questions.
+
+## Installation
+You can add SwiftNeuralNetwork to your project through [Carthage](https://github.com/Carthage/Carthage) by adding the following to your `Cartfile`.
+
+```
+github "jasonsilberman/SwiftNeuralNetwork"
+```
+
 ## Usage
 Below are some basic uses, you can look at [tests](https://github.com/jasonsilberman/SwiftNeuralNetwork/tree/master/Tests) to see some more advanced usages.
 
