@@ -1,4 +1,4 @@
-![Swift Neural Network](./logo.png)
+![Swift Neural Network](./Logo.png)
 
 A neural network built in Swift built on accelerated SIMD math. This is a network that can be trained and run on device with good performance. No need to use a server!
 
