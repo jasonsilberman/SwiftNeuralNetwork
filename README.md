@@ -9,8 +9,11 @@ To get started create an instance of `NeuralNetwork` and train some data to it.
 
 
 ```swift
+// This creates a network with three layers of the following sizes(2 nuerons, 8, 1).
+// The input layer has no activation function, while the second two both use a sigmoid function.
 let network = NeuralNetwork(layerStructure: [2, 8, 1], activationFunctions: [.none, .sigmoid, .sigmoid])
-		
+
+// We are going to train our network about the XOR operator.
 let trainingData: [[Double]] = [[0, 1], [0, 0], [1, 1], [1, 0]]
 let trainingResults: [[Double]] = [[1], [0], [0], [1]]
 
