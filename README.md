@@ -1,5 +1,5 @@
 # Swift Neural Network
-A neural network built in Swift built on accelerated SIMD math. This is a network that can be trained and run on device with good performance. No need to use a server, and unlike CoreML, it supports training networks on device.
+A neural network built in Swift built on accelerated SIMD math. This is a network that can be trained and run on device with good performance. No need to use a server!
 
 ## Usage
 Below are some basic uses, you can look at [tests](https://github.com/jasonsilberman/SwiftNeuralNetwork/tree/master/Tests) to see some more advanced usages.
