@@ -49,7 +49,7 @@ The following activation functions are available, although some do not work prop
 This should be used on the input layer, it applies no math to the inputs.
 
 ### Sigmoid
-This is the most common activation function and it will be used most frequently. It will crush all values between -1 and 1. This function has been tested the most thoroughly.
+This is the most common activation function and it will be used most frequently. It will crush all values between `0` and `1`. This function has been tested the most thoroughly.
 
 *NOTE: The inputs to this function should be normalized, otherwise the function will not be that helpful.*
 
