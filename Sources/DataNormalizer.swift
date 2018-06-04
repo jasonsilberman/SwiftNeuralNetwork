@@ -11,9 +11,8 @@ import Foundation
 /// This aligns the values of an array by its index
 /// It will result in: [[a0, b0], [a1, b1]] -> [[a0, a1], [b0, b1]]
 ///
-/// - Parameters:
-///   - set: The dataset to be alignd.
-/// - Returns: The aligned dataset.
+/// - Parameter set: The dataset to be alignd.
+/// - Returns: The aligned values.
 func alignByIndex<T>(set: [[T]]) -> [[T]] {
 	var aligned: [[T]] = []
 	for data in set {
