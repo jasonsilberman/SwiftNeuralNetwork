@@ -8,6 +8,12 @@
 
 import Foundation
 
+/// This aligns the values of an array by its index
+/// It will result in: [[a0, b0], [a1, b1]] -> [[a0, a1], [b0, b1]]
+///
+/// - Parameters:
+///   - set: The dataset to be alignd.
+/// - Returns: The aligned dataset.
 func alignByIndex<T>(set: [[T]]) -> [[T]] {
 	var aligned: [[T]] = []
 	for data in set {
@@ -25,10 +31,10 @@ func alignByIndex<T>(set: [[T]]) -> [[T]] {
 /// It uses a z-score calculation for each data point.
 public class DataNormalizer: CustomStringConvertible {
 	let initialData: [[Double]]?
-	
+
 	let means: [Double]
 	let standardDeviations: [Double]
-	
+
 	/// Initialize the normalizer with population means and standard deviations.
 	/// The index of each should correspond to the index of the value in the array of inputs.
 	///
@@ -40,19 +46,19 @@ public class DataNormalizer: CustomStringConvertible {
 		self.means = means
 		self.standardDeviations = standardDeviations
 	}
-	
+
 	/// Initialize the normalizer with some initial data.
 	/// Use this with your training data for example in order to properly calculate mean and standard deviation.
 	///
 	/// - Parameter initialData: The initial data that will be used to calulcate mean and standard deviation.
 	public init(initialData: [[Double]]) {
 		self.initialData = initialData
-		
+
 		let aligned = alignByIndex(set: initialData)
 		self.means = aligned.map({ mean($0) })
 		self.standardDeviations = aligned.map({ std($0) })
 	}
-	
+
 	/// Normalize a set of inputs.
 	///
 	/// - Parameter set: An array of inputs to be normalized.
@@ -62,13 +68,13 @@ public class DataNormalizer: CustomStringConvertible {
 			let normalizedData = data.enumerated().map({ (point) -> Double in
 				return normalize(point: point.element, index: point.offset)
 			})
-			
+
 			return normalizedData
 		}
-		
+
 		return normalizedSet
 	}
-	
+
 	/// Normalize a single input.
 	///
 	/// - Parameter data: The input (array of values) to be normalized.
@@ -77,10 +83,10 @@ public class DataNormalizer: CustomStringConvertible {
 		let normalizedData = data.enumerated().map({ (point) -> Double in
 			return normalize(point: point.element, index: point.offset)
 		})
-		
+
 		return normalizedData
 	}
-	
+
 	/// Normalizes a single value.
 	///
 	/// - Parameters:
@@ -89,10 +95,10 @@ public class DataNormalizer: CustomStringConvertible {
 	/// - Returns: The noramlized value after a z-score is calculated.
 	public func normalize(point: Double, index: Int) -> Double {
 		let normalizedPoint = (point - means[index]) / standardDeviations[index]
-		
+
 		return normalizedPoint
 	}
-	
+
 	public var description: String {
 		return "DataNormalizer(means: \(means), standardDeviations: \(standardDeviations))"
 	}

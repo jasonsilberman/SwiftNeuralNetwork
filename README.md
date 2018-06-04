@@ -12,7 +12,7 @@ github "jasonsilberman/SwiftNeuralNetwork"
 ```
 
 ## Usage
-Below is an example of some basic usage, you can look at [/tests](https://github.com/jasonsilberman/SwiftNeuralNetwork/tree/master/Tests) to see some more advanced uses.
+Below is an example of some basic usage, you can look at [`/tests`](https://github.com/jasonsilberman/SwiftNeuralNetwork/tree/master/Tests) to see some more advanced uses.
 
 ### Creation & Training
 To get started create an instance of `NeuralNetwork` and train some data to it.
