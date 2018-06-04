@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		966DFD2720C465EF00222F0D /* SineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966DFD2620C465EF00222F0D /* SineTests.swift */; };
+		966DFD2920C4A35B00222F0D /* DataNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966DFD2820C4A35B00222F0D /* DataNormalizer.swift */; };
+		966DFD2C20C4B61C00222F0D /* DataNormalizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966DFD2B20C4B61C00222F0D /* DataNormalizerTests.swift */; };
 		96EC01C620C21072008D3A2F /* SwiftNeuralNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96EC01BC20C21072008D3A2F /* SwiftNeuralNetwork.framework */; };
 		96EC01CD20C21072008D3A2F /* SwiftNeuralNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 96EC01BF20C21072008D3A2F /* SwiftNeuralNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		96EC01D920C210C7008D3A2F /* XORTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96EC01D720C210C7008D3A2F /* XORTests.swift */; };
@@ -29,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		966DFD2620C465EF00222F0D /* SineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SineTests.swift; sourceTree = "<group>"; };
+		966DFD2820C4A35B00222F0D /* DataNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataNormalizer.swift; sourceTree = "<group>"; };
+		966DFD2B20C4B61C00222F0D /* DataNormalizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataNormalizerTests.swift; sourceTree = "<group>"; };
 		96EC01BC20C21072008D3A2F /* SwiftNeuralNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftNeuralNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		96EC01BF20C21072008D3A2F /* SwiftNeuralNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftNeuralNetwork.h; sourceTree = "<group>"; };
 		96EC01C020C21072008D3A2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				96EC01D720C210C7008D3A2F /* XORTests.swift */,
+				966DFD2620C465EF00222F0D /* SineTests.swift */,
+				966DFD2B20C4B61C00222F0D /* DataNormalizerTests.swift */,
 				96EC01D820C210C7008D3A2F /* Info.plist */,
 			);
 			path = Tests;
@@ -106,6 +114,7 @@
 				96EC01DE20C211AD008D3A2F /* Maths.swift */,
 				96EC01E120C211AD008D3A2F /* NeuralNetwork.swift */,
 				96EC01DD20C211AD008D3A2F /* Node.swift */,
+				966DFD2820C4A35B00222F0D /* DataNormalizer.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -224,6 +233,7 @@
 				96EC01E220C211AD008D3A2F /* Node.swift in Sources */,
 				96EC01E420C211AD008D3A2F /* ActivationFunction.swift in Sources */,
 				96EC01E320C211AD008D3A2F /* Maths.swift in Sources */,
+				966DFD2920C4A35B00222F0D /* DataNormalizer.swift in Sources */,
 				96EC01E520C211AD008D3A2F /* Layer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +242,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				966DFD2720C465EF00222F0D /* SineTests.swift in Sources */,
+				966DFD2C20C4B61C00222F0D /* DataNormalizerTests.swift in Sources */,
 				96EC01D920C210C7008D3A2F /* XORTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

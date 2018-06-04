@@ -10,7 +10,7 @@ import Foundation
 
 /// A feed-foward then backpropogate neural network
 /// Network -> Layer -> Node
-public class NeuralNetwork: Codable {
+public final class NeuralNetwork: Codable {
 	var layers: [Layer] = []
 	
 	/// Initialize a neural network.

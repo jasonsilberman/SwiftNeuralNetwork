@@ -24,7 +24,7 @@ func randomWeights(number: Int) -> [Double] {
 
 /// A layer of the neural network.
 /// Passes the inputs to each node and then collects the outputs for the next layer.
-class Layer: Codable {
+final class Layer: Codable {
 	var nodes: [Node]
 	var outputCache: [Double]
 	

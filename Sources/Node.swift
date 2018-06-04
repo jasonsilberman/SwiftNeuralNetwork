@@ -9,7 +9,7 @@
 import Foundation
 
 /// A single node in a layer
-class Node: Codable {
+final class Node: Codable {
 	var weights: [Double]
 	var cachedValue: Double = 0.0
 	var cachedInput: [Double]

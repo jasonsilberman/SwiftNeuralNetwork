@@ -9,7 +9,7 @@
 import Foundation
 
 /// The activation function to be used in a node.
-/// NOTE: only sigmoid/none have been thoroughly tested.
+/// NOTE: Do not use softmax yet as it is not implemented.
 public enum ActivationFunction: String, Equatable, Codable {
 	case none, sigmoid, leakyReLU, softmax
 	
