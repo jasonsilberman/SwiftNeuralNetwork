@@ -42,9 +42,9 @@ class SineTests: XCTestCase {
 		print(trainingResults)
 		
 		var lastRSS: Double = 1
-		let threshold: Double = 0.02
+		let threshold: Double = 0.4
 		var count = 0
-		let maxIterations = 10000
+		let maxIterations = 100000
 		
 		while lastRSS > threshold && count < maxIterations {
 			count += 1
