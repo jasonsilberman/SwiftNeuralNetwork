@@ -4,6 +4,9 @@ A neural network built in Swift and accelerated by SIMD math. This is a feed for
 
 *This is my first foray into machine learning. It is well tested and being used in production, but please file an issue or create a pull request if you see anything wrong or have any questions.*
 
+## How is this different than CoreML or CreateML?
+Both [CoreML](https://developer.apple.com/documentation/coreml) and [CreateML](https://developer.apple.com/documentation/create_ml) are excellent frameworks provided by Apple to assist developers in machine learning. SwiftNeuralNetwork is different than these frameworks however, because SwiftNeuralNetwork is meant to be taught on an iOS device.
+
 ## Installation
 You can add SwiftNeuralNetwork to your project through [Carthage](https://github.com/Carthage/Carthage) by adding the following to your `Cartfile`.
 
@@ -40,6 +43,21 @@ You can calculate the error or cost of the network by using the following functi
 
 ```swift
 let RSS = network.rss(inputs: trainingData, targetOutputs: trainingResults)
+```
+
+### Saving a model to disk
+Saving a model to disk is useful so you don't have to retrain the model every time you launch the app. With SwiftNeuralNetwork you can do this very easily:
+
+```swift
+let encodedData = try JSONEncoder().encode(network)
+try storedData.write(to: fileURL)
+```
+
+And then you can restore the network later:
+
+```swift
+let storedData = try Data(contentsOf: fileURL)
+let recreatedNetwork = try JSONDecoder().decode(NeuralNetwork.self, from: storedData)
 ```
 
 ## Activation Functions
