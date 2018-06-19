@@ -19,5 +19,5 @@ xcuserdata
 *.xccheckout
 *.moved-aside
 *.xcuserstate
-*.xcscheme
+## *.xcscheme
 .DS_Store
