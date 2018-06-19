@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		966DFD2720C465EF00222F0D /* SineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966DFD2620C465EF00222F0D /* SineTests.swift */; };
 		966DFD2920C4A35B00222F0D /* DataNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966DFD2820C4A35B00222F0D /* DataNormalizer.swift */; };
 		966DFD2C20C4B61C00222F0D /* DataNormalizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966DFD2B20C4B61C00222F0D /* DataNormalizerTests.swift */; };
 		96EC01C620C21072008D3A2F /* SwiftNeuralNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96EC01BC20C21072008D3A2F /* SwiftNeuralNetwork.framework */; };
@@ -32,7 +31,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		966DFD2620C465EF00222F0D /* SineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SineTests.swift; sourceTree = "<group>"; };
 		966DFD2820C4A35B00222F0D /* DataNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataNormalizer.swift; sourceTree = "<group>"; };
 		966DFD2B20C4B61C00222F0D /* DataNormalizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataNormalizerTests.swift; sourceTree = "<group>"; };
 		96EC01BC20C21072008D3A2F /* SwiftNeuralNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftNeuralNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,7 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				96EC01D720C210C7008D3A2F /* XORTests.swift */,
-				966DFD2620C465EF00222F0D /* SineTests.swift */,
 				966DFD2B20C4B61C00222F0D /* DataNormalizerTests.swift */,
 				96EC01D820C210C7008D3A2F /* Info.plist */,
 			);
@@ -242,7 +239,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				966DFD2720C465EF00222F0D /* SineTests.swift in Sources */,
 				966DFD2C20C4B61C00222F0D /* DataNormalizerTests.swift in Sources */,
 				96EC01D920C210C7008D3A2F /* XORTests.swift in Sources */,
 			);
